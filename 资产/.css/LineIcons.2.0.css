@@ -2847,3 +2847,95 @@ marquee span:before {
   content: "\ec03";
 }
 
+
+
+
+
+.download-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.download-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.item {
+  width: calc(33.33% - 20px);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden; /*为了图片可以超出item*/
+  text-align: center;
+}
+
+.item h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-family: "华文中宋";
+  position: relative;
+  z-index: 1; /* 保证文字在图片的上层，但不是必须*/
+}
+
+.item p {
+  text-align: left;
+  margin-bottom: 15px;
+  font-family: "黑体";
+  position: relative;
+  z-index: 1; /*同上 */
+}
+
+.item a {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #6266d9;
+  color: white;
+  text-decoration: none;
+  transition: background-color .3s;
+  position: relative;
+  z-index: 1; /*同上 */
+}
+
+.item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.5); /*调整不透明度*/
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.item:hover::before {
+  opacity: 1;
+}
+
+/* Optional: 添加阴影效果*/
+.item {
+
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+
+}
+
+.item a:hover {
+  background-color: #4a2fb6;
+}
+
+
+
+
+
+
+
+
+
+
