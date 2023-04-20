@@ -46,7 +46,7 @@ function checkUsername2() {
       <span id="username-warning2" style="color: red; font-size: 15px;"></span>
       <label style="font-family: 黑体; font-size: 16px;">密码默认123456</label>
     </div>
-    <a href="./homepage.html">
+    <a href="./homepage.html" id="myLink" >
       <span></span>
       <span></span>
       <span></span>
@@ -54,11 +54,38 @@ function checkUsername2() {
       提交
     </a>
     <div class="footer">
+      <h3>使用当前设备累计点击次数：<span id="countSpan">0</span></h3>
       <p>2023 Fuxing News Agency©<br />法人代表:杖雍皓</p>
     </div>
   </form>
 </div>
 <!-- partial -->
+  <script>
+    
+// 定义一个变量来保存点击次数
+var clickCount = 0;
+
+// 获取链接元素
+var myLink = document.getElementById('myLink');
+
+// 给链接元素添加点击事件监听器
+myLink.addEventListener('click', function() {
+  // 点击次数加1
+  clickCount++;
   
+  // 将点击次数保存到本地存储中
+  localStorage.setItem('clickCount', clickCount);
+});
+
+// 页面加载完成后，从本地存储中读取点击次数，并更新网页上的数据
+window.onload = function() {
+  var countSpan = document.getElementById('countSpan');
+  var savedCount = localStorage.getItem('clickCount');
+  if (savedCount) {
+    clickCount = parseInt(savedCount);
+  }
+  countSpan.innerHTML = clickCount;
+};
+  </script>
 </body>
 </html>
