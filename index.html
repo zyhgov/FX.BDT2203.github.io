@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>复兴通讯社©|进入</title>
+  <link href="./assets/img/bitbug_favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link rel="stylesheet" href="./style.css">
+  <script>
+    function checkUsername() {
+    var inputBox = document.getElementById("username");
+    var warningBox = document.getElementById("username-warning");
+    if (inputBox.value.length == 0 || inputBox.value.length < 9) {
+        warningBox.innerHTML = "学号不能为空或长度不能小于9位";
+    } else {
+        warningBox.innerHTML = "";
+    }
+}
+function checkUsername2() {
+    var inputBox = document.getElementById("pwd");
+    var warningBox = document.getElementById("username-warning2");
+    if (inputBox.value != "123456") {
+        warningBox.innerHTML = "请输入临时密码123456";
+    } else {
+        warningBox.innerHTML = "";
+    }
+}
+
+  </script>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+<div class="login-box">
+  <span class="user-icon"><img src="https://zyhgov.github.io/FX.BDT2203.github.io/assets/img/logo/logo.svg" alt="" width="320px"/></span>
+  <h2>复兴通讯社©</h2>
+  <h3>襄阳职业技术学院|大数据技术2203</h3>
+  <form>
+    <div class="user-box">
+      <input type="text" name="Student ID" required="" id="username" onfocus="checkUsername()" >
+      <span id="username-warning" style="color: red; font-size: 15px;"></span>
+      <label style="font-family: 黑体; font-size: 16px;">学号</label>
+      
+    </div>
+    <div class="user-box">
+      <input type="password" name="password" required="" id="pwd" onfocus="checkUsername2()"  >
+      <span id="username-warning2" style="color: red; font-size: 15px;"></span>
+      <label style="font-family: 黑体; font-size: 16px;">密码默认123456</label>
+    </div>
+    <a href="./homepage.html">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      提交
+    </a>
+    <div class="footer">
+      <p>2023 Fuxing News Agency©<br />法人代表:杖雍皓</p>
+    </div>
+  </form>
+</div>
+<!-- partial -->
+  
+</body>
+</html>
