@@ -636,8 +636,8 @@ body {
 #dateTime{
   font-family: "Swis721 BlkOul BT";
   color:#fdfdfd;
-  text-align: center;
-  font-size: 30px;
+  text-align: left;
+  font-size: 35px;
 }
 
 marquee {
